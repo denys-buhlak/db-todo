@@ -1,0 +1,1 @@
+input[type=search]:focus:not([value=""]){background:rgba(215,224,252,1)}input[type=search]:not([value=""]){background:rgba(215,224,252,.5)}
