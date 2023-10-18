@@ -11,11 +11,15 @@
 [x] - mark as done \
 [x] - mark as important \
 [x] - filter \
-[x] - search
+[x] - search \
+[x] - show statistic
 
 ---
 
 ## Need to fix
 
-[ ] - add Important count \
 [ ] - add greeting (**_depend on time_**)
+
+## See live
+
+[Click](https://denys-buhlak.github.io/db-todo/) to see live preview
