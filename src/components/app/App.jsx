@@ -42,16 +42,20 @@ const App = () => {
     setData(toggleProperties(data, id, 'isDone'));
   };
 
-  const isDoneCount = () => {
-    return data.filter((el) => el.isDone).length;
-  };
-
   const allTodosCount = () => {
     return data.length;
   };
 
+  const isDoneCount = () => {
+    return data.filter((el) => el.isDone).length;
+  };
+
   const isActiveCount = () => {
     return data.filter((el) => !el.isDone).length;
+  };
+
+  const isImportantCount = () => {
+    return data.filter((el) => el.isImportant).length;
   };
 
   const searchItems = (items, search) => {
@@ -104,6 +108,7 @@ const App = () => {
         allTodosCount={allTodosCount()}
         isActiveCount={isActiveCount()}
         isDoneCount={isDoneCount()}
+        isImportantCount={isImportantCount()}
       />
 
       <hr className='w-100' />

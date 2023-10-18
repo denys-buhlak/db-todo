@@ -1,4 +1,4 @@
-const Dashboard = ({ allTodosCount, isDoneCount, isActiveCount }) => {
+const Dashboard = ({ allTodosCount, isDoneCount, isActiveCount, isImportantCount }) => {
   return (
     <>
       <h2 className='text-center'>All todos: {allTodosCount}</h2>
@@ -10,7 +10,7 @@ const Dashboard = ({ allTodosCount, isDoneCount, isActiveCount }) => {
         >
           Done: {isDoneCount}
         </h3>
-        <h3 className='h5 font-weight-bold text-success'>Important: ***</h3>
+        <h3 className='h5 font-weight-bold text-success'>Important: {isImportantCount}</h3>
       </div>
     </>
   );
