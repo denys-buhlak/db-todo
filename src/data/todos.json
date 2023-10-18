@@ -1,0 +1,7 @@
+{
+  "todos": [
+    { "label": "Drink Coffee", "id": 1 },
+    { "label": "Make Awesome App", "id": 2 },
+    { "label": "Have a lunch", "id": 3 }
+  ]
+}
