@@ -26,6 +26,25 @@
       crossorigin="anonymous"
     />
   </head>
+  <!-- ! TODO: need another solution -->
+  <style>
+    @keyframes test {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    p.animated {
+      animation: test 3s;
+      font-style: italic;
+    }
+  </style>
   <body>
     <div id="root"></div>
     <script
