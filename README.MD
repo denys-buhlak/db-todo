@@ -1,8 +1,10 @@
 # Todo App, created by Denys Buhlak
 
-## Start date: 10-Oct-2023
+## Dates
 
-## End date: 18-Oct-2023
+|  **Start**  |   **End**   | **Update**  |
+| :---------: | :---------: | :---------: |
+| 10-Oct-2023 | 18-Oct-2023 | 20-Oct-2023 |
 
 ## Features
 
@@ -12,13 +14,10 @@
 [x] - mark as important \
 [x] - filter \
 [x] - search \
-[x] - show statistic
+[x] - show statistic \
+[x] - greeting (**_depend on time_**)
 
 ---
-
-## Need to fix
-
-[ ] - add greeting (**_depend on time_**)
 
 ## See live
 

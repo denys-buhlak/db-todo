@@ -9,6 +9,7 @@ import ItemAddForm from '../item-add-form/ItemAddForm';
 import './app.css';
 import { todos, createTodoItem } from '../../data/todos.js';
 import Footer from '../app-footer/Footer';
+import Header from '../app-header/Header';
 
 const App = () => {
   const [data, setData] = useState(todos);
@@ -67,6 +68,7 @@ const App = () => {
       return item.label.toLowerCase().indexOf(search.toLowerCase()) > -1;
     });
   };
+
   const filterItems = (items, filter) => {
     if (filter === 'active') {
       return items.filter((item) => !item.isDone);
@@ -74,8 +76,12 @@ const App = () => {
     if (filter === 'done') {
       return items.filter((item) => item.isDone);
     }
+    if (filter === 'important') {
+      return items.filter((item) => item.isImportant);
+    }
     return items;
   };
+
   const handleSearchChange = (text) => {
     setSearchWord(text);
   };
@@ -91,39 +97,48 @@ const App = () => {
       className='mx-auto min-vh-100 d-flex flex-column'
       style={{ maxWidth: '320px' }}
     >
-      <h1 className='text-center'>Todo List</h1>
-      <hr className='w-100' />
-
-      <div className='d-flex flex-column'>
-        <SearchPanel onSearchChange={handleSearchChange} />
-        <ItemStatusFilter
-          onFilterClick={handleFilterClick}
-          filter={filter}
-        />
-      </div>
+      <Header />
 
       <hr className='w-100' />
-
-      <Dashboard
-        allTodosCount={allTodosCount()}
-        isActiveCount={isActiveCount()}
-        isDoneCount={isDoneCount()}
-        isImportantCount={isImportantCount()}
-      />
-
-      <hr className='w-100' />
-
       <ItemAddForm onAdded={addItem} />
 
       <hr className='w-100' />
 
-      <TodoList
-        todos={visibleData}
-        onDeleted={deleteItem}
-        onToggleDone={toggleDone}
-        onToggleImportant={toggleImportant}
-      />
-
+      {data.length === 0 ? (
+        <h2 className='text-center'>You don&apos;t have any todos</h2>
+      ) : (
+        <>
+          <Dashboard
+            allTodosCount={allTodosCount()}
+            isActiveCount={isActiveCount()}
+            isDoneCount={isDoneCount()}
+            isImportantCount={isImportantCount()}
+          />
+          <hr className='w-100' />
+          <div className='d-flex flex-column'>
+            <SearchPanel onSearchChange={handleSearchChange} />
+            <ItemStatusFilter
+              onFilterClick={handleFilterClick}
+              filter={filter}
+            />
+          </div>
+          <hr className='w-100' />
+          {visibleData.length === 0 ? (
+            <hgroup>
+              <h2 className='text-center'>No matches found!</h2>
+              {filter !== 'all' && <h2 className='text-center'>Filter: {filter}</h2>}
+              {searchWord.length !== 0 && <h2 className='text-center'>Search word: {searchWord}</h2>}
+            </hgroup>
+          ) : (
+            <TodoList
+              todos={visibleData}
+              onDeleted={deleteItem}
+              onToggleDone={toggleDone}
+              onToggleImportant={toggleImportant}
+            />
+          )}
+        </>
+      )}
       <hr className='w-100' />
       <Footer />
     </div>

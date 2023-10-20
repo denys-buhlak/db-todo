@@ -9,12 +9,15 @@ const createTodoItem = (label, isDone = false, isImportant = false) => {
   };
 };
 
-const todos = [
-  createTodoItem('Drink Coffee', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
-  createTodoItem('Make Awesome App', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
-  createTodoItem('Have a lunch', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
-  createTodoItem('Drink Tea', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
-];
-// const todos = [];
+let todos = [];
+
+import.meta.env.MODE === 'development' &&
+  (todos = [
+    createTodoItem('Drink Coffee', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
+    createTodoItem('Make Awesome App', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
+    createTodoItem('Have a lunch', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
+    createTodoItem('Drink Tea', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
+    createTodoItem('Call to friend', Boolean(Math.round(Math.random())), Boolean(Math.round(Math.random()))),
+  ]);
 
 export { createTodoItem, todos };
