@@ -25,9 +25,28 @@
       integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
       crossorigin="anonymous"
     />
-    <script type="module" crossorigin src="/db-todo/assets/index-9f8a3f07.js"></script>
+    <script type="module" crossorigin src="/db-todo/assets/index-196213ed.js"></script>
     <link rel="stylesheet" href="/db-todo/assets/index-40cb68ba.css">
   </head>
+  <!-- ! TODO: need another solution -->
+  <style>
+    @keyframes test {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    p.animated {
+      animation: test 3s;
+      font-style: italic;
+    }
+  </style>
   <body>
     <div id="root"></div>
     
