@@ -1,11 +1,11 @@
 const TodoListItem = ({ label, onDeleted, onToggleDone, onToggleImportant, isDone, isImportant }) => {
-  const classListImportant = isImportant ? 'font-weight-bold text-success' : '';
-  const inlineStyle = { textDecoration: isDone ? 'line-through' : 'none', minHeight: '35px' };
+  const classListImportant = isImportant ? 'fw-bold text-success' : '';
+  const classListDone = isDone ? 'fw-bold text-success text-decoration-line-through' : '';
 
   return (
     <div
-      className={`d-flex align-items-center ${classListImportant}`}
-      style={inlineStyle}
+      className={`d-flex align-items-center ${classListImportant} ${classListDone}`}
+      style={{ minHeight: '35px' }}
     >
       <span
         className='mr-auto w-100'

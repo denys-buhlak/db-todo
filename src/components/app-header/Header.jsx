@@ -9,7 +9,7 @@ const Header = () => {
         <h2 className='text-center'>{displayGreeting()}.</h2>
         <h2 className='text-center'>Here is your Todo List</h2>
       </hgroup>
-      <p className='text-right animated'>{getRandomGreeting()}</p>
+      <p className='text-end fst-italic   my-animated'>{getRandomGreeting()}</p>
     </>
   );
 };
