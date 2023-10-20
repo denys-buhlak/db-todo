@@ -1,4 +1,5 @@
 import { displayGreeting } from './../../utils/displayGreeting.js';
+import { getRandomGreeting } from './../../utils/getRandomGreeting.js';
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
         <h2 className='text-center'>{displayGreeting()}.</h2>
         <h2 className='text-center'>Here is your Todo List</h2>
       </hgroup>
+      <p className='text-right animated'>{getRandomGreeting()}</p>
     </>
   );
 };
