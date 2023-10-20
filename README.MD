@@ -14,12 +14,6 @@
 [x] - search \
 [x] - show statistic
 
----
-
-## Need to fix
-
-[ ] - add greeting (**_depend on time_**)
-
 ## See live
 
 [Click](https://denys-buhlak.github.io/db-todo/) to see live preview

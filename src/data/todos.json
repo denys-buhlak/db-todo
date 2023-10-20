@@ -1,7 +1,7 @@
 {
   "todos": [
-    { "label": "Drink Coffee", "id": 1 },
-    { "label": "Make Awesome App", "id": 2 },
-    { "label": "Have a lunch", "id": 3 }
+    { "id": 1, "label": "Drink Coffee", "isDone": false, "isImportant": false },
+    { "id": 2, "label": "Make Awesome App", "isDone": false, "isImportant": false },
+    { "id": 3, "label": "Have a lunch", "isDone": false, "isImportant": false }
   ]
 }
