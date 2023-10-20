@@ -3,6 +3,7 @@ const ItemStatusFilter = ({ filter, onFilterClick }) => {
     { name: 'all', label: 'All' },
     { name: 'active', label: 'Active' },
     { name: 'done', label: 'Done' },
+    { name: 'important', label: 'Important' },
   ];
   const handleFilterClick = (e) => {
     onFilterClick(e.target.name);
