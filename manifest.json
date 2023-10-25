@@ -1,6 +1,6 @@
 {
-  "short_name": "DB Shop",
-  "name": "Simple shop for learning",
+  "short_name": "DB Todo App",
+  "name": "Simple todo list app. Created with React, by Denys Buhlak.",
   "icons": [
     {
       "src": "favicon.ico",
